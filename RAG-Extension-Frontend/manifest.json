@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "RAG Assistant Overlay",
+  "version": "1.0",
+
+  "permissions": ["activeTab", "scripting"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_title": "Open Chat"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["client/dist/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
